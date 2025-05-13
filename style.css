@@ -1,14 +1,15 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
   
   body {
-    font-family: "helvetica-neue-lt-pro", sans-serif;
-    font-weight: 400;
+    font-family: "helvetica-neue-lt-pro-cond", sans-serif;
+    font-weight: 700;
     font-style: normal;
-    
     background-color: #f4f4f4;
     color: #333;
     padding: 20px;
   }
+  
