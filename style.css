@@ -5,11 +5,81 @@
   }
   
   body {
-    font-family: "helvetica-neue-lt-pro-cond", sans-serif;
+    font-family: "Helvetica Neue LT Pro 55 Roman", sans-serif;
     font-weight: 700;
+    line-height: normal;
     font-style: normal;
-    background-color: #f4f4f4;
+    font-size: 40px;
+    background-color: #ffffff;
     color: #333;
     padding: 20px;
   }
+
+
+  
+  .headline-link {
+    color: black;
+    text-decoration: none;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 15px;
+  }
+
+  .link {
+    font-weight: 800;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+  }
+
+  .zeit {
+    font-weight: 400;
+    font-size: 15px;
+
+  }
+
+  .wert p {
+    font-weight: 700;
+    font-size: 50px;
+  }
+
+  .wert {
+    display: flex;
+    gap: 48px;
+    justify-content: flex-start;
+    margin-left: 33px; /* Abstand zum linken Rand */
+  }
+
+  .eintraege {
+    max-width: 25%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Abstand zwischen den Elementen */
+    flex-wrap: wrap; /* Damit es bei kleinen Bildschirmen umbrechen kann */
+    
+
+  }
+
+  .titel{
+    background-color: #D3D3D3;
+    
+  }
+  
+  .inhalt {
+    background-color: #F4F4F4;
+    align-content: center;
+    
+  }
+
+  .icon {
+    height: 30px;
+  }
+  
   
