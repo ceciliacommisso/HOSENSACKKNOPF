@@ -13,23 +13,31 @@ try {
 }
 
 try {
-    // Hole die letzten 4 Werte von heute, sortiert nach Zeit
-    $sql = "SELECT wert, zeit 
-            FROM sensordata 
-            WHERE DATE(zeit) = CURDATE() 
-            ORDER BY zeit ASC 
-            LIMIT 4";
+    // Anzahl der Tage, die angezeigt werden sollen
+    $tageAnzahl = 5;
+    $tage = [];
 
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
-    $werte = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    for ($i = 0; $i < $tageAnzahl; $i++) {
+        $datum = date('Y-m-d', strtotime("-$i days"));
+        $sql = "SELECT wert, zeit 
+                FROM sensordata 
+                WHERE DATE(zeit) = :datum 
+                ORDER BY zeit ASC 
+                LIMIT 4";
 
-    // Falls weniger als 4 vorhanden sind, fülle mit null auf
-    while (count($werte) < 4) {
-        $werte[] = ["wert" => null, "zeit" => null];
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([':datum' => $datum]);
+        $werte = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        // Falls weniger als 4 Einträge vorhanden sind, mit null auffüllen
+        while (count($werte) < 4) {
+            $werte[] = ["wert" => null, "zeit" => null];
+        }
+
+        $tage[] = $werte;
     }
 
-    echo json_encode(["heute" => $werte]);
+    echo json_encode(["tage" => $tage]);
 
 } catch (PDOException $e) {
     http_response_code(500);

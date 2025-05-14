@@ -46,11 +46,41 @@
     color: black;
     text-decoration: none;
   }
+ /*____________________________css für JS*/
 
-  .zeit {
-    font-weight: 400;
-    font-size: 15px;
-  }
+ .icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0 0.5rem;
+}
+
+.icon {
+  width: 40px;
+  height: auto;
+}
+
+.zeit {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.inhalt {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Damit sie bei kleineren Bildschirmen umbrechen */
+  gap: 1rem;
+}
+
+.titel h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/*___________________*/
+
+
 
   .wert p {
     font-weight: 700;
