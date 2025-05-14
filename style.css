@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+  :root {
+    --space-s: 1rem;
+    --space-m: 2rem;
+    --space-l: 3rem;
+  }
   
   body {
     font-family: "Helvetica Neue LT Pro 55 Roman", sans-serif;
@@ -12,11 +18,13 @@
     font-size: 40px;
     background-color: #ffffff;
     color: #333;
-    padding: 20px;
   }
 
 
-  
+  header , main{
+    padding: var(--space-s);
+  }
+
   .headline-link {
     color: black;
     text-decoration: none;
@@ -29,7 +37,7 @@
 
   p {
     font-weight: 400;
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .link {
@@ -42,7 +50,6 @@
   .zeit {
     font-weight: 400;
     font-size: 15px;
-
   }
 
   .wert p {
@@ -52,19 +59,31 @@
 
   .wert {
     display: flex;
-    gap: 48px;
-    justify-content: flex-start;
-    margin-left: 33px; /* Abstand zum linken Rand */
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-left: 32px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .info_button {
+    margin-top: var(--space-l);
   }
 
   .eintraege {
-    max-width: 25%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    gap: 20px; /* Abstand zwischen den Elementen */
-    flex-wrap: wrap; /* Damit es bei kleinen Bildschirmen umbrechen kann */
-    
+    flex-wrap: wrap;
+  }
 
+  .icon_led {
+    display: flex;
+    justify-content: center;
   }
 
   .titel{
@@ -75,11 +94,26 @@
   .inhalt {
     background-color: #F4F4F4;
     align-content: center;
-    
   }
 
   .icon {
     height: 30px;
   }
+
+  footer {
+    background-color:#F4F4F4 ;
+    margin-top: var(--space-l);
+    padding: var(--space-s);
+    width: 100%;
+  }
   
+  .menu {
+    margin-bottom: var(--space-s);
+    display: flex;
+    gap: var(--space-m); 
+    flex-wrap: wrap;     
+  }
+
+
+
   
