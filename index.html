@@ -9,71 +9,37 @@
 </head>
 <body>
 
-    <header>
-        <a href="index.html" class="headline-link">
-          <h1>Wie geht <br> es dir? </h1>
-        </a>
-        <div class="info_button">
-          <a href="info.html">
-            <img src="assets/info_normal.png" alt="Info-Button" />
-          </a>
-        </div>
-      </header>
-<main>
-    <section class="plus_button">
-        <a href="eingabe.html">
-            <img src="assets/plus_normal.png" alt="neuer Eintrag">
-
-        </a>
-
-    </section>
-
-    <section class="eintraege">
-       
-        <section class="eintrag">
-             <div class="titel">
-            <h2>Tag, Datum</h2>
-
-             </div>
-             <div class="inhalt">
-            <img class="icon" src="assets/BLAU_Viereck.png" alt="">
-            <p class="zeit" >Zeit</p>
-             </div>
-         </section>
-
-
-         <section class="eintrag">
-        <div class="titel">
-            <h2>Tag, Datum</h2>
-
-        </div>
-        <div class="inhalt">
-            <img class="icon" src="assets/GRUEN_Kreis.png" alt="">
-            <p class="zeit" >Zeit</p>
-        </div>
-        </section>
-
-        <section class="eintrag">
-        <div class="titel">
-            <h2>Tag, Datum</h2>
-
-        </div>
-        <div class="inhalt">
-            <img class="icon" src="assets/GELB_Sonne.png" alt="">
-            <p class="zeit" >Zeit</p>
-        </div>
-         </section>
-
-    </section>
+  <header>
+    <a href="index.html" class="headline-link">
+      <h1>Wie geht <br> es dir? </h1>
+    </a>
+    <div class="info_button">
+      <a href="info.html">
+        <img src="assets/info_normal.png" alt="Info-Button" />
+      </a>
+    </div>
+  </header>
 
   <main>
-   
-    <footer>
-        <div class="menu">
-            <a class="link" href="info.html" >Info</a>
-            <a class="link" href="eingabe.html" >neuer Eintrag</a>
-         </div>
-        <p>Eine Projektarbeit von Cecilia und Nick für das Modul IM4 im Frühlingssemester 2024.</p>
-    </footer>
+    <section class="plus_button">
+      <a href="eingabe.html">
+        <img src="assets/plus_normal.png" alt="neuer Eintrag">
+      </a>
+    </section>
+
+    <section class="eintraege" id="data">
+      <!-- wird per script.js befüllt -->
+    </section>
+  </main> <!-- ✅ korrekt geschlossen -->
+
+  <footer>
+    <div class="menu">
+      <a class="link" href="info.html">Info</a>
+      <a class="link" href="eingabe.html">neuer Eintrag</a>
+    </div>
+    <p>Eine Projektarbeit von Cecilia und Nick für das Modul IM4 im Frühlingssemester 2024.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
