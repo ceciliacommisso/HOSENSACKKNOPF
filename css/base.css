@@ -1,7 +1,9 @@
+/* === Basis-Variablen für Farben und Abstände === */
 :root {
   --color-text: #000000;
   --color-light-gray: #F4F4F4;
   --color-dark-gray: #D3D3D3;
+
   --space-xs: 0.5rem;
   --space-s: 1rem;
   --space-m: 2rem;
@@ -9,50 +11,61 @@
   --space-xl: 5rem;
 }
 
+/* === Grundlegende Schrift und Außenabstand === */
+body {
+  font-family: "helvetica-neue-lt-pro", sans-serif;
+  font-style: normal;
+  margin: var(--space-s);
+  color: var(--color-text);
+}
+
+/* Einheitliches Layout für alle Inhalte */
+main {
+  padding: var(--space-m) var(--space-s);
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* === Überschriften und Text === */
 h1 {
   font-size: 3rem;
+  margin: 0;
 }
 
 h2 {
-  font-size: 2.5;
+  font-size: 2.5rem;
+  margin: 0;
 }
+
+h3{
+  font-size: 1.5rem;
+} 
 
 p {
   font-size: 1.5rem;
+  margin: 0 0 var(--space-s);
 }
 
+/* === Header-Layout === */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* === Links im Header (z. B. Logo oder Überschrift) === */
 .headline-link {
   color: var(--color-text);
   text-decoration: none;
   text-align: left;
 }
 
-body {
-  font-family: "helvetica-neue-lt-pro", sans-serif;
-font-style: normal;
-margin: var(--space-s);
-}
-
-
-
+/* === Sektionen mit Abstand unten === */
 section {
   margin-bottom: var(--space-l);
 }
 
-
-/* Menü-Links */
-footer {
-  padding: var(--space-m) var(--space-s);
-  text-align: center;
-  background-color: var(--color-dark-gray);
-}
-
+/* === Menü-Navigation === */
 .menu {
   margin-bottom: var(--space-s);
 }
@@ -64,15 +77,17 @@ footer {
   color: var(--color-text);
 }
 
-/* Responsive */
+/* === Footer-Bereich === */
+footer {
+  padding: var(--space-m) var(--space-s);
+  text-align: center;
+  background-color: var(--color-dark-gray);
+  color: var(--color-text);
+}
+
+/* === Responsive-Anpassungen ab 900px === */
 @media (min-width: 900px) {
-
-  .body {
-    margin: var(--space-m);
-  }
-
   .headline-link h1 {
     font-size: 5rem;
   }
 }
-

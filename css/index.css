@@ -1,24 +1,14 @@
+/* === Layout für die Startseite mit flexibler Einteilung === */
 .inhalt {
   display: flex;
-  flex-wrap: wrap; /* geändert von nowrap auf wrap */
+  flex-wrap: wrap;
   justify-content: space-between;
   background-color: var(--color-light-gray);
   padding: var(--space-m);
-  gap: var(--space-s); /* sorgt für Abstand */
+  gap: var(--space-s);
 }
 
-.eintrag .titel {
-  background-color: var(--color-dark-gray);
-  padding: var(--space-xs);
-}
-
-.eintraege {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-m);
-  justify-content: space-between;
-}
-
+/* === Einzelne Einträge (Boxen) mit Hintergrund und Radius === */
 .eintrag {
   flex: 0 0 100%;
   background-color: var(--color-light-gray);
@@ -26,13 +16,26 @@
   box-sizing: border-box;
 }
 
+/* === Container für alle Einträge === */
+.eintraege {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-m);
+  justify-content: space-between;
+}
 
+/* === Titelbalken der Einträge === */
+.eintrag .titel {
+  background-color: var(--color-dark-gray);
+  padding: var(--space-xs);
+}
+
+/* === Icon-Container für Uhrzeit oder Symbolanzeige === */
 .icon-wrapper {
-
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(25% - var(--space-s)); /* 4 pro Zeile */
+  width: calc(25% - var(--space-s)); /* vier Icons pro Reihe */
   box-sizing: border-box;
 }
 
@@ -47,38 +50,13 @@
   text-align: center;
 }
 
-section {
-  margin-bottom: var(--space-l);
-}
-
-/* Menü-Links */
-.menu {
-  margin-bottom: var(--space-s);
-}
-
-.menu a {
-  font-weight: 700;
-  font-size: 1rem;
-}
-
-/* Responsive */
+/* === Responsive: ab 900px mehrspaltig === */
 @media (min-width: 900px) {
   .eintrag {
     flex: 0 0 calc(50% - var(--space-m));
   }
-
-  .icon-wrapper {
-    width: calc(25% - var(--space-s)); /* 4 Icons in Reihe */
-  }
-
-  .icon-wrapper img {
-    width: 60px;
-  }
-
-  .icon-wrapper .zeit {
-    font-size: 1.5rem;
-  }
 }
+
 @media (min-width: 1600px) {
   .eintrag {
     flex: 0 0 calc(33.333% - var(--space-m));
