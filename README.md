@@ -1,1 +1,16 @@
-# HOSENSACKKNOPF
+BERICHT ZUM UMSETZUNGSPROZESS
+
+1. Entwicklungsprozess
+Der Projektverlauf gliederte sich in mehrere Phasen: Zunächst wurde eine Recherchephase durchgeführt, um Inhalte, Gestaltungskontext und Zielgruppenbedürfnisse zu erfassen. In dieser Zeit entstanden die zwei Interviews. Darauf aufbauend folgte die Ideenfindung und Skizzierung erster Ansätze. Die Initiale Idee – eine Art Diktaphon – welche wir Hosensackknopf genannt haben, mussten wir aber wieder verwerfen. Da wir jedoch schon unser gesamten UX-Teil aufgrund des Hosensackknopfs aufgebaut haben, haben wir uns entschieden (in Absprache mit Jan), den UX Teil von der ersten Idee abzugeben. Aufgrund einer eingebauten KI wäre das Projekt viel zu komplex und aufwendig für IM4 gewesen. Die zweite und finale Idee war ein Gerät mit fünf Knöpfen, mit welchen man seine Stimmung tracken kann. Jeden Tag um 9, 12, 15, und 19 Uhr leuchtet eine extrerne LED Lampte. Sobald diese leuchtet, kann man sich für einen der Knöpfe entscheiden (Button 1 = sehr schlecht und Button 5 = sehr gut). Die Daten werden auf einer Datenbank gespeichert und können via Webseite abgerufen werden. Die Webseite übergibt einen klaren Überblick über die Stimmung der vergangenen Zeit. Für diese Idee wurde dann auch ein MockUp erstellt, um das Programmieren der Webseite zu vereinfachen. Beim UX haben wir uns bewusst dazu entschieden, es so simpel wie möglich zu halten. Da die Zielgruppe (Ü50) auf Einfachheit und Verständlichkeit setzt, wurde beim UX vor allem grosse Icons, klare Strukturen und verständliches Design angewendet. Wir haben uns vor allem an Kinderspielen und Duolingo inspioriert. Die Applikation soll selbsterklärend und einfach sein.
+
+2. Projektstart
+Wir haben uns vor der Entwicklung aufgeteilt. Nick soll den ganzen Websitenpart und Datenbankverbindung machen und Cecilia kümmert sich um den Physical Part sowie die Dokumentation. Diese aufteilung hat sehr gut fuktioniert. 
+
+2.1 Website:
+asdf
+2.2 Physical Part & Dokumentation:
+Beim Stecken der Elektronik habe ich mich vor allem an den Plänen von Github orientiert. Anfängliche Schwierigkeiten gab es, diese hatten jedoch immer einen easy fix und waren aufgrund weniger bzw keiner Erfahrung im Pysical Computing zurückzuführen. Beim Programmieren erging es mir sehr ähnlich. Grundsätzlich hat das meiste gut und schnell funktioniert. Bei Schwierigkeiten konsultierte ich die Dozenten, Tutoren oder ChatGPT und dies hat immer super funktioniert. Der Pysical Computing Teil war nach zwei Tagen grundsätzlich fertig. Danach habe ich mich um die Dokumentation gekümmert. Diese war eigentlich grossenteils selbsterklärend und erfolgte ohne Schwierigkeiten. Insofern sollte es keine Bugs geben, da unser Gadget & unsere Applikation genau so funktioniert, wie wir sie uns vorgestellt und geplant haben.
+3. Learning
+Der Learningfaktor war extrem hoch. Cecilia hat IM4 mit null Kenntnises bezüglich Physical Computing gestartet. Und wir haben in nichtmal zwei Wochen ein fuktionierendes Gadget hergestellt. Da das ganze einen physichen Aspekt hatte, machte es Cecilia viel mehr Spass als das herkömmliche Webprogrammieren. Man konnte experimentieren und basteln. Zudem versteht sie nun den Code ein bisschen besser als auch schon. Die Verbindung zur Datenbank ist noch ein wenig mysteriös für sie, aber sie weiss plus minus, wie es geht.
+Nick
+
