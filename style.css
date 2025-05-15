@@ -5,6 +5,7 @@
   }
 
   :root {
+    --space-xs: 0.5rem;
     --space-s: 1rem;
     --space-m: 2rem;
     --space-l: 3rem;
@@ -29,6 +30,7 @@
     color: black;
     text-decoration: none;
   }
+
 
   h2 {
     font-weight: 600;
@@ -62,20 +64,20 @@
 }
 
 .zeit {
-  font-size: 0.85rem;
-  color: #444;
+  font-size: 15px;
 }
 
 .inhalt {
   display: flex;
   justify-content: center;
   flex-wrap: wrap; /* Damit sie bei kleineren Bildschirmen umbrechen */
-  gap: 1rem;
+  gap: 0.5rem;
+  margin-bottom: var(--space-m);
 }
 
 .titel h2 {
-  text-align: center;
-  margin-bottom: 1rem;
+  text-align: left;
+  padding: var(--space-xs);
 }
 
 /*___________________*/
@@ -129,6 +131,18 @@
   .icon {
     height: 30px;
   }
+
+  /*_______________info*/
+
+  .infografik {
+    width: 100%;
+    max-width: 300px; /* z. B. fixe Maximalbreite */
+    height: auto;
+    display: block;
+  }
+
+
+
 
   footer {
     background-color:#F4F4F4 ;
