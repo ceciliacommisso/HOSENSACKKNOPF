@@ -41,23 +41,62 @@ document.addEventListener('DOMContentLoaded', () => {
         const contentDiv = document.createElement('div');
         contentDiv.classList.add('inhalt');
 
-        eintraege.forEach(item => {
-          // ❗ Nur anzeigen, wenn ein gültiger Wert vorhanden ist
-          if (!item.wert || !iconMap[item.wert]) return;
+        // Slot-Zeiten: Nur diese sind erlaubt
+        const slotZeiten = [
+          { label: '09:00', stunde: 9 },
+          { label: '12:00', stunde: 12 },
+          { label: '15:00', stunde: 15 },
+          { label: '19:00', stunde: 19 }
+        ];
 
-          const wert = item.wert;
-          const zeit = item.zeit ? new Date(item.zeit).toLocaleTimeString('de-DE', {
-            hour: '2-digit', minute: '2-digit'
-          }) : '';
+        // Map für vorhandene Einträge pro Slot
+        const slotMap = {
+          '09:00': null,
+          '12:00': null,
+          '15:00': null,
+          '19:00': null
+        };
+
+        // Einträge nach Uhrzeit in Slots sortieren
+        eintraege.forEach(item => {
+          if (!item.wert || !iconMap[item.wert] || !item.zeit) return;
+
+          const zeitObj = new Date(item.zeit);
+          const stunde = zeitObj.getHours();
+
+          const slot = slotZeiten.find(s => s.stunde === stunde);
+          if (!slot) return;
+
+          slotMap[slot.label] = { wert: item.wert, zeit: zeitObj };
+        });
+
+        // Alle Slots anzeigen – entweder Eintrag oder Platzhalter
+        slotZeiten.forEach(slot => {
+          const eintrag = slotMap[slot.label];
+
+          let imgSrc, imgAlt, zeitText;
+
+          if (eintrag) {
+            imgSrc = iconMap[eintrag.wert];
+            imgAlt = `Wert ${eintrag.wert}`;
+            zeitText = eintrag.zeit.toLocaleTimeString('de-DE', {
+              hour: '2-digit',
+              minute: '2-digit'
+            });
+          } else {
+            imgSrc = 'assets/FRAGEZEICHEN.png';
+            imgAlt = 'Noch kein Eintrag';
+            zeitText = slot.label;
+          }
 
           const img = document.createElement('img');
           img.classList.add('icon');
-          img.src = iconMap[wert];
-          img.alt = `Wert ${wert}`;
+          img.src = imgSrc;
+          img.alt = imgAlt;
 
           const p = document.createElement('p');
           p.classList.add('zeit');
-          p.textContent = zeit;
+          p.textContent = zeitText;
 
           const wrapper = document.createElement('div');
           wrapper.classList.add('icon-wrapper');

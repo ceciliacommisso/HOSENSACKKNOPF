@@ -1,0 +1,51 @@
+
+
+main {
+  padding: var(--space-m) var(--space-s);
+  max-width: 800px;
+  margin: auto;
+}
+
+.inhalt {
+  display: flex;
+  flex-direction:row ;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+}
+
+.eintrag .titel {
+  background-color: var(--color-dark-gray);
+  padding: var(--space-xs);
+}
+.inhalt {
+  background-color: var(--color-light-gray);
+  padding: var(--space-m);
+}
+
+
+section {
+  margin-bottom: var(--space-l);
+}
+
+/* Menü-Links */
+.menu {
+  margin-bottom: var(--space-s);
+}
+
+.menu a {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    padding: var(--space-s);
+  }
+}
+
+

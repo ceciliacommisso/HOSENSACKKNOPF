@@ -1,0 +1,65 @@
+main {
+  padding: var(--space-m) var(--space-s);
+  max-width: 700px;
+  margin: auto;
+}
+
+.Infografik {
+  margin-bottom: var(--space-s);
+}
+
+.erklaerung {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  margin-top: var(--space-l);
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+}
+
+.icon-text img {
+  width: 40px;
+  height: auto;
+}
+
+.icon_led {
+  display: flex;
+  justify-content: center;
+  margin-top:var(--space-xl) ;
+  margin-bottom: var(--space-s);
+}
+
+footer {
+  padding: var(--space-s);
+  background-color: #f4f4f4;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.link {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .headline-link h1 {
+    font-size: 1.6rem;
+  }
+
+  .wert {
+    justify-content: center;
+    gap: var(--space-s);
+  }
+
+  .wert p {
+    font-size: 1.5rem;
+  }
+}
+
+
