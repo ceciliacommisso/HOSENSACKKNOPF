@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   eintraegeContainer.innerHTML = '';
 
   const iconMap = {
-    1: 'assets/ROT_Ausrufezeichen.png',
+    1: 'assets/Ausrufezeichen.png',
     2: 'assets/GRUEN_Kreis.png',
     3: 'assets/BLAU_Viereck.png',
     4: 'assets/ORANGE_Dreieck.png',
@@ -17,8 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(json => {
       const tage = json.tage;
-
-      console.log(json);
 
       tage.forEach(eintraege => {
         if (eintraege.length === 0) return;
@@ -41,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const contentDiv = document.createElement('div');
         contentDiv.classList.add('inhalt');
 
-        // Slot-Zeiten: Nur diese sind erlaubt
         const slotZeiten = [
           { label: '09:00', stunde: 9 },
           { label: '12:00', stunde: 12 },
@@ -49,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
           { label: '19:00', stunde: 19 }
         ];
 
-        // Map für vorhandene Einträge pro Slot
         const slotMap = {
           '09:00': null,
           '12:00': null,
@@ -57,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
           '19:00': null
         };
 
-        // Einträge nach Uhrzeit in Slots sortieren
         eintraege.forEach(item => {
           if (!item.wert || !iconMap[item.wert] || !item.zeit) return;
 
@@ -70,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
           slotMap[slot.label] = { wert: item.wert, zeit: zeitObj };
         });
 
-        // Alle Slots anzeigen – entweder Eintrag oder Platzhalter
         slotZeiten.forEach(slot => {
           const eintrag = slotMap[slot.label];
 
@@ -84,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
               minute: '2-digit'
             });
           } else {
-            imgSrc = 'assets/FRAGEZEICHEN.png';
+            imgSrc = 'assets/Fragezeichen.png';
             imgAlt = 'Noch kein Eintrag';
             zeitText = slot.label;
           }

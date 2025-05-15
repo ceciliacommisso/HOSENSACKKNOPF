@@ -1,28 +1,51 @@
-
-
-main {
-  padding: var(--space-m) var(--space-s);
-  max-width: 800px;
-  margin: auto;
-}
-
 .inhalt {
   display: flex;
-  flex-direction:row ;
-  flex-wrap: nowrap;
+  flex-wrap: wrap; /* geändert von nowrap auf wrap */
   justify-content: space-between;
-
+  background-color: var(--color-light-gray);
+  padding: var(--space-m);
+  gap: var(--space-s); /* sorgt für Abstand */
 }
 
 .eintrag .titel {
   background-color: var(--color-dark-gray);
   padding: var(--space-xs);
 }
-.inhalt {
-  background-color: var(--color-light-gray);
-  padding: var(--space-m);
+
+.eintraege {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-m);
+  justify-content: space-between;
 }
 
+.eintrag {
+  flex: 0 0 100%;
+  background-color: var(--color-light-gray);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+}
+
+
+.icon-wrapper {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(25% - var(--space-s)); /* 4 pro Zeile */
+  box-sizing: border-box;
+}
+
+.icon-wrapper img {
+  width: 60px;
+  height: auto;
+}
+
+.icon-wrapper .zeit {
+  margin-top: var(--space-xs);
+  font-size: 1.5rem;
+  text-align: center;
+}
 
 section {
   margin-bottom: var(--space-l);
@@ -38,14 +61,26 @@ section {
   font-size: 1rem;
 }
 
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2rem;
+/* Responsive */
+@media (min-width: 900px) {
+  .eintrag {
+    flex: 0 0 calc(50% - var(--space-m));
   }
 
-  main {
-    padding: var(--space-s);
+  .icon-wrapper {
+    width: calc(25% - var(--space-s)); /* 4 Icons in Reihe */
+  }
+
+  .icon-wrapper img {
+    width: 60px;
+  }
+
+  .icon-wrapper .zeit {
+    font-size: 1.5rem;
   }
 }
-
-
+@media (min-width: 1600px) {
+  .eintrag {
+    flex: 0 0 calc(33.333% - var(--space-m));
+  }
+}

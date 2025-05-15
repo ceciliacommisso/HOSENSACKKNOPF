@@ -25,7 +25,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: var(--space-l);
 }
 
 .headline-link {
@@ -34,30 +33,23 @@ header {
   text-align: left;
 }
 
-
 body {
   font-family: "helvetica-neue-lt-pro", sans-serif;
 font-style: normal;
-  --color-bg: #ffffff;
+margin: var(--space-s);
 }
 
-main {
-  padding: var(--space-m) var(--space-s);
-  max-width: 800px;
-  margin: auto;
-}
+
 
 section {
   margin-bottom: var(--space-l);
 }
 
 
-
 /* Menü-Links */
 footer {
   padding: var(--space-m) var(--space-s);
   text-align: center;
-  font-size: 0.9rem;
   background-color: var(--color-dark-gray);
 }
 
@@ -67,20 +59,20 @@ footer {
 
 .menu a {
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-decoration: none;
   color: var(--color-text);
 }
 
 /* Responsive */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2rem;
+@media (min-width: 900px) {
+
+  .body {
+    margin: var(--space-m);
   }
 
-  main {
-    padding: var(--space-s);
+  .headline-link h1 {
+    font-size: 5rem;
   }
 }
-
 

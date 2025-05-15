@@ -1,18 +1,61 @@
+
+
 main {
   padding: var(--space-m) var(--space-s);
-  max-width: 700px;
+  max-width: 1200px;
   margin: auto;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-s) var(--space-m);
+}
+
+.headline-link {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.1rem;
+  margin: 0 0 var(--space-s);
+}
+
 .Infografik {
-  margin-bottom: var(--space-s);
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: var(--space-l);
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  margin-bottom: var(--space-l);
+}
+
+.erklaerung,
+.info {
+  background-color: var(--color-light-gray);
+  padding: var(--space-m);
+  padding-top: var(--space-xs);
 }
 
 .erklaerung {
   display: flex;
   flex-direction: column;
   gap: var(--space-s);
-  margin-top: var(--space-l);
 }
 
 .icon-text {
@@ -29,37 +72,45 @@ main {
 .icon_led {
   display: flex;
   justify-content: center;
-  margin-top:var(--space-xl) ;
+  margin-top: var(--space-l);
   margin-bottom: var(--space-s);
 }
 
 footer {
-  padding: var(--space-s);
-  background-color: #f4f4f4;
+  padding: var(--space-m) var(--space-s);
   text-align: center;
-  font-size: 0.9rem;
-  color: #666;
+  background-color: var(--color-dark-gray);
+  color: var(--color-text);
 }
 
-.link {
+.menu {
+  margin-bottom: var(--space-s);
+}
+
+.menu a {
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--color-text);
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .headline-link h1 {
-    font-size: 1.6rem;
+/* ⬆ Responsive Anpassung ab 900px: nebeneinander */
+@media (min-width: 900px) {
+  .info-container {
+    flex-direction: row;
+    align-items: flex-start;
   }
 
-  .wert {
-    justify-content: center;
-    gap: var(--space-s);
+  .erklaerung,
+  .info {
+    flex: 1;
   }
 
-  .wert p {
-    font-size: 1.5rem;
+  .erklaerung {
+    margin-right: var(--space-s);
+  }
+
+  .info {
+    margin-left: var(--space-s);
   }
 }
-
-
