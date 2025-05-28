@@ -1,5 +1,11 @@
 # Bericht zum Umsetzungsprozess
 
+In unserem Projekt haben wir ein einfach zu bedienendes Gerät entwickelt, mit dem Nutzer:innen ihre Stimmung erfassen können. Das Gerät besteht aus fünf Knöpfen und einer LED-Lampe, die zu festgelegten Zeiten am Tag leuchtet. Nutzer:innen können per Knopfdruck angeben, wie sie sich gerade fühlen – von "sehr schlecht" bis "sehr gut". Die Stimmungsdaten werden in einer Datenbank gespeichert und auf einer übersichtlichen Webseite visualisiert.
+
+Das Video zeigt unser Gerät in Aktion: Wie es aufgebaut ist, wie es funktioniert und wie die Stimmungserfassung durch Knopfdruck abläuft. Es gibt einen Einblick in das User Interface der Webseite und vermittelt die Idee, wie das System im Alltag genutzt werden kann.
+
+https://youtu.be/kpYLlLLYOns
+
 ## 1. Entwicklungsprozess
 
 Der Projektverlauf gliederte sich in mehrere Phasen:  
