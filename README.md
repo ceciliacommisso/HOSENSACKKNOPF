@@ -84,12 +84,16 @@ Unser Gadget und unsere Applikation funktionieren genau so, wie wir es geplant h
 
 ## 3. Learnings
 
-Der Lerneffekt war extrem hoch.  
+Der Lerneffekt für beide extrem hoch.  
 Cecilia startete IM4 ohne jegliche Vorkenntnisse im Physical Computing – und wir haben es geschafft, in weniger als zwei Wochen ein funktionierendes Gadget zu entwickeln.
 
 Der physische Aspekt des Projekts machte viel mehr Spaß als reines Webprogrammieren.  
 Es war toll, zu experimentieren und zu basteln.  
 Cecilia versteht nun den Code ein bisschen besser als vorher, auch wenn die Datenbankverbindung noch etwas mysteriös erscheint – aber sie hat eine grobe Vorstellung, wie es funktioniert.
+
+Nick konnte seine Fähigkeiten im HTML/CSS/JavaScribt verbessern und festigen. Der Aufbau und die Verbindung mit der Datenbank war ebenfalls lehrreich. 
+Das Problemlösen und Verstehen mit ChatGPT hat Spass gemacht. Wie KI für ein solches Projekt ideal eingesetzt werden kann, wurde vertieft. 
+Das vorgängige Überlegen wie und warum genau die Website/Datenbank aufgebaut werden war neu. Der Prozess was manchmal etwas ermürbend, frustrierend aber schlussendlich zufriedenstellend. 
 
 
 # Schritt für Schritt Anleitung Arduino
