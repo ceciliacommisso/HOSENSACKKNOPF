@@ -14,7 +14,7 @@ try {
 
 try {
     // Anzahl der Tage, die angezeigt werden sollen
-    $tageAnzahl = 5;
+    $tageAnzahl = 30;
     $tage = [];
 
     for ($i = 0; $i < $tageAnzahl; $i++) {
